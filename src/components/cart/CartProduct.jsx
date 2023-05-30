@@ -13,14 +13,14 @@ export default function CartProduct({ cartProduct, dispatch }) {
   };
 
   return (
-    <div className="cartProductContainer row">
+    <div className="cartProductContainer row mt-4">
       <img
         src="/assets/P18.jpg"
-        className="img-fluid col-3 p-2"
-        alt={cartProduct.title}
+        className="img-fluid col-6 p-0"
+        alt={cartProduct.name}
       />
-      <div className="cartProductDescription col-7 p-2">
-        <p>{cartProduct.title}</p>
+      <div className="cartProductDescription col-6 p-2">
+        <p>{cartProduct.name}</p>
         <p>
           Quantity:
           <br />
@@ -36,8 +36,8 @@ export default function CartProduct({ cartProduct, dispatch }) {
         <p>Sub - Total: $ {cartProduct.sub_total}</p>
       </div>
       <div
-        className="col-md-4 d-flex p-2"
-        style={{ flexDirection: "column", justifyContent: "space-around" }}
+        className="d-flex p-2"
+        style={{ flexDirection: "row", justifyContent: "space-around" }}
       >
         <button className="btn btn-outline-danger" onClick={handleRemove}>
           Remove

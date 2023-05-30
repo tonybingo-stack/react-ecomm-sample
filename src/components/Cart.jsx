@@ -10,7 +10,7 @@ export default function Cart() {
   return (
     <div className="cartContainer container">
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-4">
           {state?.map((cartProduct) => {
             return (
               <CartProduct cartProduct={cartProduct} dispatch={dispatch} />
@@ -30,7 +30,7 @@ export default function Cart() {
             </div>
           )}
         </div>
-        <div className="col-md-6 statusContainer">
+        <div className="col-md-8 statusContainer">
           <h2>Cart Status</h2>
           {state.map((x) => {
             total += x.sub_total;
