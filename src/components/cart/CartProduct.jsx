@@ -15,7 +15,7 @@ export default function CartProduct({ cartProduct, dispatch }) {
   return (
     <div className="cartProductContainer row">
       <img
-        src={cartProduct.image}
+        src="/assets/P18.jpg"
         className="img-fluid col-3 p-2"
         alt={cartProduct.title}
       />
@@ -32,17 +32,17 @@ export default function CartProduct({ cartProduct, dispatch }) {
             +
           </button>
         </p>
-        <p>Item - Price: ₹ {cartProduct.price}</p>
-        <p>Sub - Total: ₹ {cartProduct.sub_total}</p>
+        <p>Item - Price: $ {cartProduct.price}</p>
+        <p>Sub - Total: $ {cartProduct.sub_total}</p>
       </div>
       <div
-        className="col-md-2 d-flex p-2"
+        className="col-md-4 d-flex p-2"
         style={{ flexDirection: "column", justifyContent: "space-around" }}
       >
         <button className="btn btn-outline-danger" onClick={handleRemove}>
           Remove
         </button>
-        {/* <button className="btn btn-light">Buy Now</button> */}
+        <button className="btn btn-success">Buy Now</button>
       </div>
     </div>
   );
